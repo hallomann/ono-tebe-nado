@@ -1,0 +1,96 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+    background-color: #1e1e1e;
+    font-family: 'Inter', sans-serif; /* Основной шрифт страницы с альтернативным */
+    color: #000; /* Цвет текста по умолчанию */
+}
+
+.content-section {
+    width: 360px;
+    margin: 0 auto; /* Центрирование блоков */
+    box-sizing: border-box; /* Чтобы padding не изменял ширину элемента */
+}
+
+.content-section_theme_dark {
+    background-color: #000; /* Черный фон для темной темы */
+    color: #fff; /* Белый текст для контраста */
+}
+
+.content-section_theme_bright {
+    background-color: #FFFF00; /* Желтый фон для яркой темы */
+    color: #000; /* Черный текст для контраста */
+}
+
+.header,
+.footer,
+.cover,
+.intro,
+.reasons,
+.how-to {
+    padding: 24px 20px; /* Базовые отступы, которые потом настроим индивидуально */
+}
+
+.header,
+.footer {
+    padding: 24px 20px; /* Указано в вашем примере */
+}
+
+/* Примеры индивидуальных отступов для каждой секции.
+   Можно настроить под конкретные требования вашего дизайна. */
+.cover {
+    padding: 48px 20px;
+}
+
+.intro {
+    padding: 36px 20px;
+}
+
+.reasons {
+    padding: 30px 20px;
+}
+
+.how-to {
+    padding: 40px 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+}
+
+.header__logo-image {
+    width: 100px; /* Или другой размер, в зависимости от дизайна вашего логотипа */
+}
+
+.header__menu-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header__menu-item {
+    margin-right: 20px; /* Расстояние между пунктами меню */
+}
+
+.header__menu-item:last-child {
+    margin-right: 0; /* Убираем отступ у последнего элемента */
+}
+
+.header__menu-link {
+    text-decoration: none;
+    color: black; /* Цвет текста ссылок, настройте под свой дизайн */
+    font-size: 16px; /* Размер текста */
+}
+
+.header__menu-item_active .header__menu-link {
+    color: #007BFF; /* Цвет активной ссылки, измените под свой дизайн */
+}
