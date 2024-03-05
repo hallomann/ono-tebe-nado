@@ -1,1 +1,87 @@
-/* место для вашего кода */
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+  
+.header__menu {
+    grid-column: 1 / 2;
+    /* дополнительные стили */
+}
+  
+.header__logo {
+    grid-column: 2 / 3;
+    /* убедиться, что логотип центрирован относительно всего header, а не только его сеточного контейнера */
+    justify-self: center;
+}
+  
+.header__address {
+    grid-column: 3 / 4;
+    /* дополнительные стили */
+}
+
+.header__middle-title {
+    border: 1px solid #000; /* Черная рамка */
+    text-align: center;
+}
+
+.cover {
+    /* Предполагается, что фон установлен через background-image или другое свойство. */
+    position: relative;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Пример полупрозрачности */
+    z-index: 2;
+}
+
+.cover__title {
+    position: relative;
+    letter-spacing: 2px; /* Общее расстояние между буквами для заголовка */
+    z-index: 3;
+}
+
+.aligned-text {
+    display: block;
+    line-height: 1.2; /* Интерлиньяж */
+}
+
+.aligned-text_center {
+    text-align: center;
+}
+
+.aligned-text_right {
+    text-align: right;
+}
+
+.letter-spacing-extended {
+    letter-spacing: 5px;
+}
+
+.no-letter-spacing {
+    letter-spacing: 0;
+}
+
+.cover__description {
+    position: relative;
+    z-index: 3;
+}
+
+.cover__description-text {
+    word-spacing: 10px; /* Нестандартное расстояние между словами */
+}
+
+.bet-button {
+    background: transparent;
+    border: 2px solid white; /* Предположим, что кнопка имеет белую границу */
+    padding: 10px 20px;
+    cursor: pointer;
+    /* Другие необходимые стили для кнопки, включая font-family, color и др. */
+}
+
