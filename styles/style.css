@@ -1,3 +1,9 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 178px;
+  }
+
 /* Начало классов header  */
   
 .header {
@@ -37,9 +43,9 @@
   
 .header__logo {
     display: block;
-    justify-self: center;
-    width: 148px;
-    height: 105px;
+    justify-self: start;
+    width: 227px;
+    height: 104px;
     transition: transform 0.3s ease;
 }
   
@@ -54,6 +60,7 @@
   
 .header__address {
     justify-self: end;
+    margin-right: 35px;
 }
   
 .header__address-link {
@@ -108,19 +115,37 @@
     text-transform: uppercase;
     word-spacing: 18px;
 }
+
+.bet-button {
+    border: 1px solid #fff;
+    padding: 12px 32px;
+    color: inherit;
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    background: transparent;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
   
+.bet-button:hover {
+    transform: scale(1.03);
+}
+
 /* Конец классов cover */
 
 /* Начало классов lots  */
   
 .lots {
-    padding: 179px 50px 50px;
+    padding: 3px 18px 0px 22px;
 }
   
 .lots__heading {
-    margin-bottom: 27px;
-    margin-left: 40px;
-    font-weight: 700;
+    margin-bottom: 24px;
+    margin-left: 42px;
+    font-weight: bold;
     font-size: 40px;
     line-height: normal;
     text-transform: uppercase;
@@ -129,20 +154,34 @@
 .lots__card-list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: stretch;
     gap: 25px;
     width: 100%;
-    margin-bottom: 30px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-  
+
+@media (max-width: 480px) {
+    .lots__card-list-item {
+    flex: 1 1 100%;
+    }
+}
+
 .lots__card-list-item {
     flex-grow: 1;
-    flex: 1 1 430px;
-    min-height: 450px;
+    flex: 1 1 calc(33.333% - 25px);
+    max-width: calc(33.333% - 25px);
+    min-height: 480px;
 }
   
 .lots__look-more-link {
-    margin-left: 40px;
+    display: flex;
+    margin-left: 44px;
+    padding-top: 27px;
     font-weight: 400;
     font-size: 20px;
     line-height: normal;
@@ -175,7 +214,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 101%;
     height: 100%;
     padding: 50px 40px;
     color: #fff;
@@ -215,6 +254,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
+    width: 107%;
 }
   
 /* Конец классов card */
@@ -225,14 +265,14 @@
     display: grid;
     grid-template-columns: min-content 1fr;
     column-gap: 28px;
-    padding: 130px 50px 90px;
+    padding: 6px 25px 87px 50px;
 }
   
 .about__logo {
     display: flex;
     width: 240px;
     height: 240px;
-    margin: 0 94px;
+    margin: 0 23px;
     border-radius: 50%;
     background: #000;
 }
@@ -245,16 +285,18 @@
 }
   
 .about__title {
-    margin-top: 102px;
-    margin-bottom: 100px;
-    font-weight: 700;
+    margin-top: 101px;
+    margin-bottom: 99px;
+    margin-left: 21px;
+    font-weight: bold;
     font-size: 40px;
     line-height: normal;
     text-transform: uppercase;
 }
   
 .about__text {
-    font-weight: 400;
+    margin-left: 21px;
+    font-weight: 100;
     font-size: 20px;
     line-height: normal;
 }
@@ -327,20 +369,16 @@
   
 /* Конец классов footer */
 
-/* Начало вспомогательных классов  */
-  
-.no-wrap {
-    white-space: nowrap;
+/* Начало классов для общих элементов  */
+
+.address {
+    max-width: 238px;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24.3px;
 }
-  
-.letter-spacing-extended {
-    letter-spacing: 60px;
-}
-  
-.no-letter-spacing {
-    letter-spacing: normal;
-}
-  
+
 .aligned-text,
 .aligned-text_center,
 .aligned-text_right {
@@ -358,6 +396,18 @@
 .aligned-text_right {
     text-align: right;
 }
+
+.no-wrap {
+    white-space: nowrap;
+}
+  
+.letter-spacing-extended {
+    letter-spacing: 60px;
+}
+  
+.no-letter-spacing {
+    letter-spacing: normal;
+}
   
 .overlay {
     position: absolute;
@@ -369,30 +419,4 @@
     background: rgba(0, 0, 0, 0.6);
 }
   
-.address {
-    max-width: 238px;
-    font-weight: 400;
-    font-size: 18px;
-    font-style: normal;
-    line-height: 24.3px;
-}
-  
-.bet-button {
-    border: 1px solid #fff;
-    padding: 12px 32px;
-    color: inherit;
-    font-family: "Raleway", sans-serif;
-    font-size: 22px;
-    line-height: normal;
-    text-align: center;
-    text-transform: uppercase;
-    background: transparent;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-  
-.bet-button:hover {
-    transform: scale(1.03);
-}
-  
-/* Конец вспомогательных классов */
+/* Конец классов для общих элементов*/
