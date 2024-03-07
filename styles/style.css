@@ -33,7 +33,7 @@
   
 .header__link_active {
     text-decoration: none;
-    pointer-events: none 
+    pointer-events: none;
 }
 
 .header__logo {
@@ -384,7 +384,7 @@ main {
   
 .footer__menu-link_active {
     text-decoration: none;
-    pointer-events: none 
+    pointer-events: none;
 }
   
 .footer__social-link {
